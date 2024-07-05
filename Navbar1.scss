@@ -1,0 +1,963 @@
+    #header {   
+        background: #f8f9fa;
+        border-bottom: 0px solid #ffffff;
+        margin-top: 0px;
+    }
+
+    .navbar-brand {
+        padding: 0px 0px;
+    
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .main-menu .nav-link,
+    .second-menu .nav-link {
+        color: #000000;
+        padding: 0em 0em;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-family: 'Open Sans', cursive;
+        position:relative;
+        padding-top: 30px;
+        font-size: 14px;
+        margin-right: 4em; /* Reduzi o espaçamento entre os links para 2em */
+    }
+        
+    /* Estilos específicos para o dropdown de Áreas de Atuação */
+    #navbar-areas .dropdown-menu {
+        border-radius: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Navbar1.css */
+    .container {
+        .dropdown-menu {
+            position: static; /* Reseta a propriedade position */
+            top: 10%; /* Centraliza verticalmente */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translate(-50%, -10%);
+            width: 90%; /* Largura do dropdown */
+            max-width: 200000px; /* Largura máxima para limitar o tamanho */
+            margin: 0; /* Centraliza horizontalmente */
+            background: #000000;
+            border-radius: 8px;
+            color: #FFF;
+            font-size: 1em;
+            padding: 1rem; /* Espaçamento interno */
+            box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Sombra */
+            display: flex; /* Esconde o dropdown inicialmente */
+            opacity: 0; /* Invisível inicialmente */
+            transition: all 0.4s ease; /* Transição suave para todas as propriedades */
+            
+            &.show {
+                display: block; /* Exibe o dropdown */
+                opacity: 0; /* Totalmente visível */
+                transform: translate(-20%, 0); /* Centralizado sem deslocamento vertical */
+            }
+        }
+    }
+
+    /* Estilo para todos os dropdowns */
+    .dropdown-menu-wide {
+        border-radius: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed; /* Posiciona o dropdown de forma fixa */
+        top: 10px; /* Centraliza verticalmente */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translate(-50%, -90%); /* Ajusta a posição horizontal e vertical */
+        z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+        background-color: #000000; /* Mantém a cor de fundo */
+        max-height: 120vh; /* Altura máxima do dropdown */
+        overflow-y: auto; /* Adiciona scroll vertical se necessário */
+        text-align: center; /* Centraliza itens horizontalmente */
+        animation: slide-up 0.4s ease-in-out; /* Animação de baixo para cima */
+        width: 800000vw; /* Largura responsiva */
+
+        @keyframes slide-up {
+            0% {
+                transform: translate(-50%, -40%); /* Inicia fora da tela */
+            }
+            100% {
+                transform: translate(-50%, -50%); /* Posição final centralizada */
+            }
+        }
+
+        &.show {
+            transform: translateY(0) scaleY(1); /* Exibe verticalmente */
+        }
+    }
+
+    .navbar-nav .dropdown-menu {
+        left: auto; /* Reseta a propriedade left */
+        right: auto; /* Reseta a propriedade right */
+        transform: none; /* Remove a transformação horizontal */
+        
+    }
+
+    .dropdown-item {
+        /* Mantém os estilos existentes */
+        color: #f0f0f0;
+        padding: 1rem;
+        transition: background-color 0.4s ease, color 0.4s ease;
+        text-align: left;
+        font-family: "Open Sans", cursive;
+        margin-left: 3em;
+        width: 230px;
+        
+        &:hover {
+            font-size: 12px
+
+        }
+    }
+
+    /* Estilo do label de busca */
+    .search-label {
+        font-weight: bold;
+        margin-bottom: 1em; /* Aumentando o espaçamento abaixo do label */
+    }
+
+    /* Estilo do formulário de busca */
+    .form-content-search {
+        .form-control {
+            border-radius: 0;
+            padding: 0.5em; /* Ajustando o padding do input */
+            border: 1px solid #ced4da; /* Adicionando uma borda */
+            font-size: 14px; /* Ajustando o tamanho da fonte */
+        }
+
+        .btn {
+            border-radius: 0;
+            padding: 0.5em 1em; /* Ajustando o padding do botão */
+            background: #0056b3;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            transition: background 0.4s ease; /* Adicionando transição suave */
+
+            &:hover {
+                background: #003d82;
+            }
+        }
+    }
+
+    .language-button1 {
+        padding: 2px 2px;
+        border: solid 1px #000000;
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+
+    .language-button1:hover {
+    text-decoration: none;
+    background: #000000;
+    color: #FFF; }
+
+
+    /* Estilo do botão de mudança de linguagem */
+    .language-button1 {
+        font-weight: bold;
+        color: #000000;
+        padding: 0.5em 1em; /* Aumentando o padding */
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    /* Estilo do formulário de busca na barra de navegação */
+    .navbar-search {
+        .form-general-search {
+            .form-control {
+                border-radius: 0;
+                padding: 0.5em; /* Ajustando o padding */
+                border: 1px solid #ced4da; /* Adicionando uma borda */
+                font-size: 16px; /* Ajustando o tamanho da fonte */
+            }
+
+            .btn {
+                border-radius: 0;
+                padding: 0.5em 1em; /* Ajustando o padding */
+                background: #0056b3;
+                color: #fff;
+                font-weight: bold;
+                border: none;
+                transition: background 0.4s ease; /* Adicionando transição suave */
+
+                &:hover {
+                    background: #000000;
+                }
+            }
+        }
+    }
+
+    /* Estilo do ícone do LinkedIn *////////////////////////////////////////////////////////////////////////////////////////////////////////
+    .linkedin {
+        width: 16px;
+        height: auto;
+        margin-bottom: 7px;
+
+    }
+
+    /* Estilos específicos para seção header */
+    section#header {
+        nav.navbar {
+            #menu-items {
+                .nav-item {
+                    .dropdown-menu.areas {
+                        padding: 2% 0;
+                    }
+                    .dropdown-menu {
+                        width: 100%;
+                        margin-top: 0.5%;
+                        background: #000000;
+                        border-radius: 0;
+                        color: #FFF;
+                        font-size: 2em;
+                        padding: 0.75rem 0;
+                        animation-name: slide-in;
+                        box-shadow: 0 4px 8px -2px #ff8e8e;
+                        position: static;
+                    }
+                }
+            }        
+        }
+    }
+
+    @media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-left: -20px;
+    }}
+
+    /* Padrão para telas grandes */
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: fixed;
+    }
+
+    /* Alterar para static em telas pequenas */
+    .dropdown-menu .show {
+        /* Estilos para o dropdown quando estiver visível em telas grandes ou dispositivos móveis */
+        /* Por exemplo: */
+        position: relative; /* Ou outra posição desejada */
+        display: block; /* Garante que o dropdown seja visível */
+        /* Adicione outros estilos necessários conforme a necessidade */
+    }
+
+    // Outros comentários específicos para documentação ou organização do código
+    .dropdown-toggle.active-dropdown::after {
+        transform: rotate(-90deg);
+    }
+    .dropdown-toggle.active-dropdown::after{transform:rotate(-90deg)}
+
+    /* Estilos padrão para todas as telas */
+    .dropdown-menu {
+        position: static;
+        top: 50%; /* Centraliza verticalmente */
+        left: 50%; /* Centraliza horizontalmente */
+        width: 100%; /* Largura do dropdown */
+        max-width: 4000px; /* Largura máxima para limitar o tamanho */
+        margin: 0; /* Centraliza horizontalmente */
+        background: #000000;
+        border-radius: 12px;
+        color: #FFF;
+        font-size: 2em;
+        padding: 1rem; /* Espaçamento interno */
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Sombra */
+        display: none; /* Esconde o dropdown inicialmente */
+    }
+
+    /* Media query para telas pequenas (dispositivos móveis) */
+    @media (max-width: 991.98px) {
+        .dropdown-menu {
+            position: fixed; /* Exibe o dropdown em telas pequenas */
+        }  
+    }
+
+    /* Estilo para os itens do dropdown */
+    .dropdown-menu a {
+        color: #FFF;
+        display: flex;
+        padding: 0rem 5rem;
+        text-decoration: none;
+        font-size: 12px;
+        font-family: "Open Sans", cursive;
+        padding-bottom: 3px;
+        padding-top: 3px;
+    }   
+
+    @media (max-width: 991.98px) {
+        .dropdown-menu a{
+            font-size: 11px;
+            margin-left: -61px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+    @media (max-width: 768px) {
+        .dropdown-menu a{
+            font-size: 11px;
+            margin-left: -23px;
+            margin: 0px auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: -8em;
+        }
+    }
+    @media (max-width: 450px) {
+        .dropdown-menu a{
+            font-size: 15px;
+            padding: 2px;
+            margin-left: 0em;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+
+    /* Estilo para o item ativo no dropdown */
+    .dropdown-menu a.active {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    .banner-item-41 .box:before {
+        background-color: #EE7523 !important;
+    }
+    .banner-item-41 .box:after {
+        border-color: #EE7523 !important;
+    }
+
+    .banner-item-12 .box-title {
+        color: #ff0000 !important; /* Cor para o título */
+        background: #00ff00 !important; /* Cor de fundo para o título */
+    }
+
+    .banner-item-12 .box .text {
+        color: #0000ff !important; /* Cor para o texto */
+        background: #ffff00 !important; /* Cor de fundo para o texto */
+    }
+
+    .banner-item-12 .box:before {
+        border-color: #ff00ff !important; /* Cor da borda */
+        background-color: #ffffff !important; /* Cor de fundo */
+    }
+
+    .banner-item-12 .box:after {
+        border-color: #00ffff !important; /* Cor da borda */
+    }
+
+    .banner-item-12 .box .text:before {
+        border-color: #f0f0f0 !important; /* Cor da borda */
+    }
+
+    .banner-item-12 .box .text:after {
+        border-color: #cccccc !important; /* Cor da borda */
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+        cursor: pointer;
+        border: none;
+        background: none;
+        padding: 0.5rem;
+        background: black;
+        border: #000;
+        width: 3.5rem;
+
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 2.5em;
+            height: 1.5em;
+            position: relative;
+            background: #000000;
+
+            span {
+                display: block;
+                width: 2rem;
+                height: 3px;
+                background-color: #ffffff;
+                position: absolute;
+                transition: all 0.4s ease;
+
+                &:nth-child(1) {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:nth-child(3) {
+                    bottom: 0;
+                }
+            }
+        }
+
+        &.active .navbar-toggler-icon span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            background-image: var(--bs-navbar-toggler-icon-bg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 0%;
+        }
+        &.active .navbar-toggler-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.active .navbar-toggler-icon span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+    }
+    @media (max-width: 460px) {
+        .navbar-toggler {
+            width: 41px;
+            padding: 1px;
+            height: 38px;
+        }
+    
+        .navbar-toggler-icon {
+            width: 2.2em;
+            height: 1.3em;
+        }
+    
+        .navbar-toggler-icon span {
+            width: 1.8rem;
+            height: 2.5px;
+        }
+    }
+    
+    /* Estilos para telas menores que 385px */
+    @media (max-width: 385px) {
+        .navbar-toggler {
+            width: 2.5rem;
+            padding: 0.3rem;
+        }
+    
+        .navbar-toggler-icon {
+            width: 2em;
+            height: 1em;
+        }
+    
+        .navbar-toggler-icon span {
+            width: 1.5rem;
+            height: 2px;
+        }
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        width: 35px;
+    }
+
+
+    // Estilos para o dropdown com ícones
+    .dropdown-menu-icon-container {
+        display: flex;
+        flex-wrap: wrap; // Permite que os itens se quebrem para a próxima linha
+        justify-content: center; // Centraliza os itens horizontalmente
+        align-items: center; // Centraliza os itens verticalmente
+        gap: 1rem; // Espaçamento entre os itens
+        padding: 1rem; // Espaçamento interno do 
+        background: #000000;
+        border-radius: 8px;
+        color: #FFF;
+        font-size: 1em;
+        box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.2); // Sombra
+    }
+
+    // Estilo para os itens 
+    .dropdown-menu-icon-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Define três colunas de largura igual
+        gap: 1rem; // Espaçamento entre os itens
+
+        .icon-item {
+            display: flex;
+            flex-direction: column; // Organiza o conteúdo verticalmente
+            align-items: center; // Centraliza o conteúdo horizontalmente
+            justify-content: center; // Centraliza o conteúdo verticalmente
+            padding: 1rem; // Espaçamento interno dos itens
+            background: #ffffff; // Cor de fundo dos itens
+            border-radius: 8px; // Bordas arredondadas
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra dos itens
+            width: 100px; // Largura fixa dos itens
+            height: 100px; // Altura fixa dos itens
+            text-align: center; // Centraliza o texto
+
+            // Estilo para os ícones
+            .icon {
+                font-size: 2rem; // Tamanho dos ícones
+                margin-bottom: 0.5rem; // Espaçamento abaixo dos ícones
+            }
+        }
+    }
+
+        // Estilo para os textos dos itens
+        .text {
+            font-size: 1rem; // Tamanho do texto
+            color: #000000; // Cor do texto
+        }
+        
+
+        @media (min-width: 992px) {
+            .navbar-expand-lg {
+                display:flex;
+                height: 50px;
+                padding-bottom: 0;
+            }
+        }
+
+        @media (min-width: 992px){
+        .containergrid .nav-item .dropdown{
+        padding-left: var(--bs-navbar-nav-link-padding-x);   
+    }
+        }
+
+        @media (min-width: 992px){
+        .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 25px;
+        }}
+
+    @media (max-width: 1200px) {
+        .navbar-brand .logo {
+            max-height: 41px;
+            max-width: 300px;
+            margin-left: 11px;
+            margin-top: -26px;
+        }
+    }
+    
+        @media (max-width: 991.98px) {
+            .navbar-expand-lg .navbar-nav .dropdown-menu {
+                position: static;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .dropdown-menu .container {
+                border-radius: 0;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed; /* Posiciona o dropdown de forma fixa */
+                transform: translate(-50%, -50%); /* Ajusta a posição horizontal e vertical */
+                z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+                background-color: #000000; /* Mantém a cor de fundo */
+                max-height: 80vh; /* Altura máxima do dropdown */
+                overflow-y: auto; /* Adiciona scroll vertical se necessário */
+                text-align: center; /* Centraliza itens horizontalmente */
+                animation: slide-up 0.3s ease-in-out; /* Animação de baixo para cima */
+                width: 80vw; /* Largura responsiva */
+            }
+        }
+
+        @media (max-width: 992px) {
+            /* Estilos para dispositivos móveis (telas menores que 768px) */
+            .dropdown-menu .show {
+                /* Estilos específicos para quando o dropdown está visível em dispositivos móveis */
+                position: relative; /* Ou outra posição desejada */
+                display: flex; /* Garante que o dropdown seja visível */
+                /* Adicione outros estilos necessários conforme a necessidade */
+            }
+            .dropdown-menu .container{
+                top: 150px;
+            }
+            }
+            
+        @media (min-width: 768px) {
+        /* Outros estilos para telas maiores aqui... */
+
+        .navbar-collapse.collapse {
+            display: block !important; /* Alteração desejada */
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+            max-width: 725px;
+
+        }
+    }
+        
+    @media (min-width: 992px) {
+        /* Estilos para telas grandes (992px ou mais) */
+        .dropdown-menu .container {
+            border-radius: 0;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed; /* Posiciona o dropdown de forma fixa */
+            top: 185px; /* Centraliza verticalmente padrão */
+
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta a posição horizontal e vertical */
+            z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+            background-color: #000000; /* Cor de fundo */
+            max-height: 100vh; /* Altura máxima do dropdown */
+            overflow-y: auto; /* Adiciona scroll vertical se necessário */
+            text-align: left; /* Centraliza itens horizontalmente */
+            animation: slide-up 0.4s ease-in-out; /* Animação de baixo para cima */
+            width: 100%; /* Largura responsiva */
+            padding: 0.75rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cresce automaticamente */
+            min-height: 60px; /* Altura mínima de 60px */
+        }
+        .containergrid .dropdown-menu .container {
+            top: 185px;
+        }
+        .dropdown-menu .container{
+            top: 120px;
+        }
+
+        /* Aplicando top: 160px quando .containergrid estiver presente */
+
+    }
+
+    @media (min-width: 1200px){
+    .containergrid .dropdown-menu .container {
+        top: 223px !important;
+    }
+    .dropdown-menu .container{
+        top: 157px !important;
+    }}
+
+    @media (min-width: 992px) and (max-widht: 1200px) {
+        .containergrid .dropdown-menu .container {
+            top: 185px!important;
+        }
+        .dropdown-menu .container{
+            top: 120px!important;
+        }}
+
+   
+        
+
+
+
+
+        @media (min-width: 1200px) {
+            .container, 
+            .container-lg, 
+            .container-md, 
+            .container-sm, 
+            .container-xl {
+                max-width: 2710px;
+                margin: -3% auto; /* Centraliza horizontalmente e adiciona margem superior */
+                width: 100%; /* Largura do container */
+                padding: 1rem; /* Espaçamento interno */
+                background: #ffffff; /* Cor de fundo */
+                box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15); /* Sombra */
+                border-radius: 8px; /* Bordas arredondadas */
+                display: flex;
+                top: -25%;
+            }
+        }
+            @media (min-width: 768px) {
+        /* Outros estilos para telas maiores aqui... */
+
+        .navbar-collapse.collapse {
+            display: block !important; /* Alteração desejada */
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+            max-width: 720px;
+        }
+        .navbar-toggler {
+            display: none;}
+        }
+
+        .navbar {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); // Sombra forte
+            --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+            --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+            --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+            --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-brand-padding-y: 2rem;
+            --bs-navbar-brand-margin-end: -4rem;
+            --bs-navbar-brand-font-size: 1.25rem;
+            --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-nav-link-padding-x: 6rem;
+            --bs-navbar-toggler-font-size: 1.25rem;
+            --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2833, 37, 41, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e);
+            --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+            --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+            --bs-navbar-toggler-focus-width: 0.25rem;
+            --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+            
+            height: 90px;
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            background-color: #ffffff;
+            width: 100%;
+            z-index: 1030; /* Ajuste o valor de z-index conforme necessário para garantir que o navbar fique sobreposto */
+
+    
+            @media (max-width: 1200px) {
+                --bs-navbar-brand-margin-end: 30px;
+            }
+            @media (min-width: 1200px) {
+                --bs-navbar-brand-margin-end: 3rem;}
+            @media (min-width: 1300px) {
+                --bs-navbar-brand-margin-end: 11rem;}
+
+            /* Definindo position:relative para dispositivos móveis com largura até 768px */
+            @media (max-width: 992px) {
+                position: relative;
+                height: 100%;
+                max-width: 100%;
+                margin: -3% auto; /* Centraliza horizontalmente e adiciona margem superior */
+                width: 100%; /* Largura do container */
+                padding: 3.1rem; /* Espaçamento interno */
+                background: #ffffff; /* Cor de fundo */
+                box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15); /* Sombra */
+                border-radius: 8px; /* Bordas arredondadas */
+                display: flex;
+                top: 25%;
+                margin-left: 0em;
+            }
+            @media (max-width: 768px) {
+                position: relative;
+                height: 100%;
+                max-width: 100%;
+                margin: 0% auto; /* Centraliza horizontalmente e adiciona margem superior */
+                width: 100%; /* Largura do container */
+                padding: 1rem; /* Espaçamento interno */
+                background: #ffffff; /* Cor de fundo */
+                box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15); /* Sombra */
+                border-radius: 8px; /* Bordas arredondadas */
+                display: flex;
+                top: 25%;
+                margin-left: 0em;
+            }
+            @media (max-width: 400x) {
+                position: relative;
+                height: 100%;
+                max-width: 100%;
+                margin: -3% auto; /* Centraliza horizontalmente e adiciona margem superior */
+                width: 100%; /* Largura do container */
+                padding: 3.1rem; /* Espaçamento interno */
+                background: #ffffff; /* Cor de fundo */
+                box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.15); /* Sombra */
+                border-radius: 8px; /* Bordas arredondadas */
+                display: flex;
+                top: 25%;
+                margin-left: 0em;
+            }
+        }
+
+        /* Estilos para o logotipo da empresa */
+    .company-logo {
+        width: 400px;
+        margin-left: 30px;
+    }
+        /* Reduz a largura máxima do logotipo para 200px em dispositivos com largura máxima de 910px */
+    @media (max-width: 992px) {
+        .company-logo {
+        max-width: 50px;
+        }
+    }
+    /* Estilos para o logotipo na barra de navegação */
+    .navbar-brand .logo {
+        max-height: 59px;
+        max-width: 400px;
+        margin-left: 78px;
+        margin-top: -26px;
+        
+        @media (max-width: 1200px) {
+            max-height: 60px;
+            max-width: 300px;
+            margin-left: 50px;
+            margin-top: 0px;
+        }
+        @media (min-width: 1200px) {
+            max-height: 67px;
+            max-width: 356px;
+            margin-left: 78px;
+            margin-top: -11px;
+        }
+        @media (min-width: 1300px) {
+            max-height: 70px;
+            max-width: 400px;
+            margin-left: 71px;
+            margin-top: -13px;
+        }}
+
+    /* Estilos adicionais responsivos, se necessário */
+    @media (max-width: 992px) {
+        .navbar-brand .logo {
+        max-height:   48px; /* Reduz a altura máxima do logotipo para telas menores *//////////////////////////////////////////////////////////////////////////
+        margin-right: 15em; /* Aumentando a margem entre itens do menu */
+        margin-left: -1em; /* Aumentando a margem entre itens do menu */
+        }
+        @media (max-width: 800px) {
+            .navbar-brand .logo {
+            max-height:   45px; /* Reduz a altura máxima do logotipo para telas menores *//////////////////////////////////////////////////////////////////////////
+            margin-right: 12em; /* Aumentando a margem entre itens do menu */
+            margin-left: -1em; /* Aumentando a margem entre itens do menu */
+            }
+        }
+        
+        .navbar-brand {
+        font-size: 0rem;
+        }}
+
+        .dropdown-menu a {
+            color: #fff;
+            display: flex;
+            font-family: Open Sans, cursive;
+            font-size: 12px;
+            padding: 3px 0rem;
+            text-decoration: none;
+        }
+
+         @media (max-width: 992px){
+         .dropdown-menu a {
+            font-size: 11px;
+            padding: 5px 3rem;
+         }}
+
+    @media (max-width: 768px) {
+        .navbar-brand .logo{
+            margin-right: 9em; /* Aumentando a margem entre itens do menu */
+            max-height:   48px; /* Reduz a altura máxima do logotipo para telas menores *//////////////////////////////////////////////////////////////////////////
+            margin-left: -1em; 
+        }
+    }
+    @media (max-width: 430px) {
+        .navbar-brand .logo{
+            max-height: 44px;
+            margin-right: 0em;
+            margin-top: 8px;
+        }}
+
+    @media (max-width: 380px) {
+        .navbar-brand .logo{
+            max-height: 41px ;
+            margin-right: 0em;
+            margin-top: 4px;
+        }
+    }
+
+    @media (max-width: 365px) {
+        .navbar-brand .logo{
+            max-height: 35px!important;
+            margin-right: 0em;
+            margin-top: 4px;
+        }
+    }
+    
+    @media (max-width: 390px) {
+        .navbar-brand .logo{
+            max-height: 40px;
+            margin-right: 0em;
+            margin-top: 6px;
+        }
+    }
+
+    .main-menu .nav-link,
+    .second-menu .nav-link {
+        color: #000000;
+        padding: 0em 0em;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-family: 'Open Sans', cursive;
+        position:relative;
+        padding-top: 0px;//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        font-size: 14px;
+        margin-right: 4.5em; /* Reduzi o espaçamento entre os links para 2em */
+        .containergrid{
+            max-width: 10px !important;
+        }
+    }
+        .main-menu .nav-link:hover,
+        .second-menu .nav-link:hover {
+        color: #000000;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .containergrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(-2px, 1fr)); /* Cresce automaticamente */
+        gap: 1rem; /* Espaçamento entre os itens */
+
+        .grid-item {
+        display: flex;
+        flex-direction: column; /* Organiza o conteúdo verticalmente */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        padding: 1rem; /* Espaçamento interno dos itens */
+        background: #000000; /* Cor de fundo dos itens */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra dos itens */
+        text-align: center; /* Centraliza o texto */
+    
+        .icon {
+            font-size: 2rem; /* Tamanho dos ícones */
+            margin-bottom: 0.5rem; /* Espaçamento abaixo dos ícones */
+        }
+        }
+    
+        @media (max-width: 768px) {
+        /* Em telas menores, ajusta para uma coluna por linha */
+        grid-template-columns: 1fr; /* Uma coluna por linha */
+        }
+    }
+        
+    .language-button1 {
+        padding: 2px 4px;
+        border: solid 1px #000000;
+        font-size: 0.8em;
+        font-weight: 700;
+        margin-top: -3px;
+    }
+
+    a, a:hover {
+        color: #000000;
+    }
+    a {
+        color: #000000;
+        text-decoration: none;
+        background-color: transparent;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+
+    user agent stylesheet
+    a:-webkit-any-link {
+        color: -webkit-link;
+        cursor: pointer;
+        text-decoration: underline;
+    }
